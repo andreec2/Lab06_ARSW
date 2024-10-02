@@ -1,0 +1,47 @@
+/* Estilo para la tabla */
+table {
+    width: 80%; /* Ajusta el ancho al 80% del contenedor */
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: auto;  /* Centra la tabla horizontalmente */
+    margin-right: auto; /* Centra la tabla horizontalmente */
+  }
+  
+  /* Estilo para las celdas de la tabla */
+  th, td {
+    border: 1px solid black;
+    padding: 6px; /* Reduce el padding para hacerla más compacta */
+    text-align: center; /* Alinea el texto en el centro */
+    font-size: 14px; /* Reduce el tamaño de la fuente */
+  }
+  
+  /* Estilo para los encabezados */
+  th {
+    background-color: #410000;
+    font-weight: bold;
+  }
+  
+  /* Estilo para los botones */
+  button {
+    background-color: #4CAF50;
+    color: rgb(153, 64, 64);
+    padding: 5px 10px; /* Reduce el tamaño del botón */
+    border: none;
+    cursor: pointer;
+    font-size: 14px; /* Ajusta el tamaño de la fuente */
+  }
+  
+  /* Estilo del botón en estado hover */
+  button:hover {
+    background-color: #45a049;
+  }
+  
+  /* Espaciado para los encabezados de sección */
+  h3 {
+    margin-top: 20px;
+    text-align: center; /* Centra el título */
+  }
+
+  body{
+    background-color: rgb(95, 0, 95);
+  }
