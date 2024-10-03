@@ -1,47 +1,121 @@
 /* Estilo para la tabla */
 table {
-    width: 80%; /* Ajusta el ancho al 80% del contenedor */
-    border-collapse: collapse;
-    margin-top: 20px;
-    margin-left: auto;  /* Centra la tabla horizontalmente */
-    margin-right: auto; /* Centra la tabla horizontalmente */
-  }
-  
-  /* Estilo para las celdas de la tabla */
-  th, td {
-    border: 1px solid black;
-    padding: 6px; /* Reduce el padding para hacerla más compacta */
-    text-align: center; /* Alinea el texto en el centro */
-    font-size: 14px; /* Reduce el tamaño de la fuente */
-  }
-  
-  /* Estilo para los encabezados */
-  th {
-    background-color: #410000;
-    font-weight: bold;
-  }
-  
-  /* Estilo para los botones */
-  button {
-    background-color: #4CAF50;
-    color: rgb(153, 64, 64);
-    padding: 5px 10px; /* Reduce el tamaño del botón */
-    border: none;
-    cursor: pointer;
-    font-size: 14px; /* Ajusta el tamaño de la fuente */
-  }
-  
-  /* Estilo del botón en estado hover */
-  button:hover {
-    background-color: #45a049;
-  }
-  
-  /* Espaciado para los encabezados de sección */
-  h3 {
-    margin-top: 20px;
-    text-align: center; /* Centra el título */
-  }
+  width: 80%; /* Mantiene el ancho del 80% del contenedor */
+  border-collapse: collapse;
+  margin: 20px auto; /* Simplificación para centrar la tabla y añadir margen superior */
+  background-color: #1C6E8C; /* Fondo para las filas */
+  border-radius: 8px; /* Bordes redondeados para un look más suave */
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2); /* Sombra para darle profundidad */
+}
 
-  body{
-    background-color: rgb(95, 0, 95);
-  }
+/* Estilo para las celdas de la tabla */
+th, td {
+  border: 1px solid #DADADA; /* Color más suave para los bordes */
+  padding: 10px; /* Ajusta el padding para darle más espacio a las celdas */
+  text-align: center;
+  font-size: 16px; /* Tamaño de fuente más grande para mejor legibilidad */
+  color: #FFFFFF; /* Texto blanco */
+  vertical-align: middle; /* Alineación vertical en el centro */
+}
+
+/* Estilo para los encabezados */
+th {
+  background-color: #004B70; /* Color de fondo para encabezados */
+  font-weight: bold;
+  text-transform: uppercase; /* Convierte el texto a mayúsculas */
+  letter-spacing: 1px; /* Espaciado de letras para mejor claridad */
+}
+
+/* Estilo para los botones */
+button {
+  background-color: #1ABC9C; /* Color verde menta */
+  color: #FFFFFF;
+  padding: 10px 20px; /* Aumenta ligeramente el tamaño de los botones */
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  border-radius: 5px; /* Bordes ligeramente más redondeados */
+  transition: background-color 0.3s ease, transform 0.2s ease; /* Suave transición en hover y escala */
+  margin: 5px 0; /* Margen superior e inferior para espaciar los botones */
+}
+
+/* Estilo del botón en estado hover */
+button:hover {
+  background-color: #16A085; /* Color más oscuro en hover */
+  transform: scale(1.05); /* Aumenta ligeramente el tamaño al pasar el cursor */
+}
+
+/* Espaciado para los encabezados de sección */
+h3 {
+  margin-top: 20px;
+  text-align: center;
+  color: #DADADA; /* Color claro para los títulos */
+  font-family: 'Roboto', sans-serif; /* Aplicación de fuente */
+  font-size: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase; /* Texto en mayúsculas */
+}
+
+/* Estilo para el cuerpo */
+body {
+  background-color: #0A2A43; /* Azul oscuro para un look más profesional */
+  font-family: 'Roboto', sans-serif; /* Fuente moderna y legible */
+  color: #FFFFFF; /* Texto blanco */
+  margin: 0;
+  padding: 0;
+}
+
+/* Ajustes para formularios */
+form {
+  text-align: center;
+  margin-top: 20px;
+}
+
+input[type="text"] {
+  padding: 10px;
+  border: 1px solid #DADADA;
+  border-radius: 5px;
+  font-size: 16px;
+  width: 250px;
+  margin-right: 10px;
+}
+
+/* Ajustes para h1 */
+h1 {
+  text-align: center;
+  color: #FFFFFF;
+  font-family: 'Roboto', sans-serif;
+  font-size: 28px;
+  letter-spacing: 1.5px;
+  margin-top: 20px;
+}
+
+/* Estilo para el contenedor de detalles de blueprint */
+.details-container {
+  width: 80%; /* Mantén el ancho igual que la tabla */
+  margin: 20px auto;
+  padding: 15px;
+  background-color: #003D5B; /* Fondo más oscuro para los detalles */
+  border-radius: 8px;
+  box-shadow: 0px 0px 12px rgba(0, 0, 0, 0.2);
+}
+
+.details-container h3 {
+  font-size: 22px;
+}
+
+.details-container div {
+  margin: 10px 0;
+}
+
+.canvas-container {
+  display: flex;           /* Usar flexbox para centrar */
+  justify-content: center; /* Centrar horizontalmente */
+  align-items: center;     /* Centrar verticalmente (opcional) */
+  margin: 20px 0;         /* Margen superior e inferior (opcional) */
+}
+
+.canvas {
+  border: 1px solid #ccc; /* Bordes del canvas (opcional) */
+}
+

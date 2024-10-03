@@ -40,10 +40,15 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
         // Load example data
         Point[] pts = new Point[] { new Point(140, 140), new Point(115, 115), new Point(115, 115), new Point(140, 140),
                 new Point(140, 140) };
+        Point[] housePoints = new Point[] {
+                new Point(100, 500), new Point(300, 500), new Point(300, 300),
+                new Point(200, 200),new Point(100, 300)
+        };
+
         Point[] points = new Point[] { new Point(10, 10), new Point(20, 20) };
         Blueprint bp = new Blueprint("_authorname_", "_bpname_ ", pts);
         Blueprint an = new Blueprint("andres", "MyPlane", pts);
-        Blueprint an2 = new Blueprint("andres", "MyPlane2", pts);
+        Blueprint an2 = new Blueprint("andres", "MyPlane2", housePoints);
         // Blueprint jp=new Blueprint("juan","MyBook", points);
         blueprints.put(new Tuple<>(an.getAuthor(), an.getName()), an);
         blueprints.put(new Tuple<>(an2.getAuthor(), an2.getName()), an2);
