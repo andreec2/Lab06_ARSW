@@ -38,21 +38,49 @@ public class InMemoryBlueprintPersistence implements BlueprintsPersistence {
      */
     public InMemoryBlueprintPersistence() {
         // Load example data
-        Point[] pts = new Point[] { new Point(140, 140), new Point(115, 115), new Point(115, 115), new Point(140, 140),
-                new Point(140, 140) };
+        Point[] pts = new Point[] { new Point(140, 140), new Point(115, 115),
+                new Point(115, 115), new Point(140, 140), new Point(140, 140) };
+
         Point[] housePoints = new Point[] {
                 new Point(100, 500), new Point(300, 500), new Point(300, 300),
-                new Point(200, 200),new Point(100, 300)
-        };
+                new Point(200, 200),new Point(100, 300)};
 
-        Point[] points = new Point[] { new Point(10, 10), new Point(20, 20) };
-        Blueprint bp = new Blueprint("_authorname_", "_bpname_ ", pts);
+        Point[] randomPoints = new Point[] {
+                new Point(100, 200), new Point(300, 400), new Point(0, 300),
+                new Point(200, 350),new Point(127, 300)};
+
+        Point[] juanPoints = new Point[] {
+                new Point(100, 0), new Point(0, 500), new Point(300, 0),
+                new Point(0, 200),new Point(100, 0)};
+
+        Point[] lauraPoints = new Point[] {
+                new Point(100, 50), new Point(70, 500), new Point(300, 120),
+                new Point(20, 200),new Point(100, 0), new Point(30, 120),
+                new Point(20, 0),new Point(100, 0), new Point(300, 120),
+                new Point(250, 260),new Point(100, 180), new Point(30, 120),
+                new Point(20, 123),new Point(100, 170)};
+
+        //Creacion de planos
         Blueprint an = new Blueprint("andres", "MyPlane", pts);
         Blueprint an2 = new Blueprint("andres", "MyPlane2", housePoints);
-        // Blueprint jp=new Blueprint("juan","MyBook", points);
+        Blueprint an3 = new Blueprint("andres", "MyPlane3", randomPoints);
+        Blueprint an4 = new Blueprint("andres", "MyPlane4", juanPoints);
+        Blueprint an5 = new Blueprint("andres", "MyPlane5", lauraPoints);
+
+        Blueprint jp = new Blueprint("juan", "MyPlane", juanPoints);
+        Blueprint jp1 = new Blueprint("juan", "MyPlane1", lauraPoints);
+
+        //Se agregan los blueprints a hash de blueprints
         blueprints.put(new Tuple<>(an.getAuthor(), an.getName()), an);
         blueprints.put(new Tuple<>(an2.getAuthor(), an2.getName()), an2);
-        // blueprints.put(new Tuple<>(jp.getAuthor(),jp.getName()), jp);
+        blueprints.put(new Tuple<>(an3.getAuthor(), an3.getName()), an3);
+        blueprints.put(new Tuple<>(an4.getAuthor(), an4.getName()), an4);
+        blueprints.put(new Tuple<>(an5.getAuthor(), an5.getName()), an5);
+
+        //Mas autores xd
+        blueprints.put(new Tuple<>(jp.getAuthor(), jp.getName()), jp);
+        blueprints.put(new Tuple<>(jp1.getAuthor(), jp1.getName()), jp1);
+
     }
 
     /**
